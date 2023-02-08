@@ -12,7 +12,7 @@ Now a common example in EntityFramework Core articles is to add auditing by over
 and add the audit information by inspecting the `ChangeTracker`. Some tutorials also use an `SaveChangesInterceptor` to add 
 it as a cross-cutting concern. 
 
-The problem with this kind of approach to auditing is, that it already doesn't work for EF Core 7 `ExecuteUpdateAsync` 
+The problem with this kind of approach to auditing is, that it doesn't work for EF Core 7 `ExecuteUpdateAsync` 
 methods, that basically bypass the `DbContext.SaveChangesAsync` method. So this example serves as a word of caution, so 
 you don't run into a problem late in your EntityFramework Core application.
 
