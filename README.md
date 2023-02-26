@@ -5,7 +5,7 @@ This repository contains various experiments with EntityFramework Core.
 ## /EfCoreAudit ##
 
 Audit trails are a very, very common requirement in software development. And if you are using 
-SQL Server (or MySQL) it's really easy to use a Temporal Table and track everything, that happens 
+SQL Server (or MariaDB) it's really easy to use a Temporal Table and track everything, that happens 
 to your data. Just let your expensive database handle it!
 
 Now a common example in EntityFramework Core articles is to add auditing by overriding the `DbContext.SaveChanges` method 
