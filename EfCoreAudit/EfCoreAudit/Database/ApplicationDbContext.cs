@@ -16,7 +16,7 @@ namespace EfCoreAudit.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasSequence<int>("PersonID", schema: "Sequences")
+            modelBuilder.HasSequence<int>("sq_Person", schema: "Application")
                 .StartsAt(1000)
                 .IncrementsBy(1);
 
@@ -29,7 +29,7 @@ namespace EfCoreAudit.Context
 
                 entity.Property(x => x.Id)
                     .HasColumnType("INT")
-                    .HasDefaultValueSql("NEXT VALUE FOR [Sequences].[PersonID]")
+                    .HasDefaultValueSql("NEXT VALUE FOR [Application].[sq_Person]")
                     .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.FullName)

@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace EfCoreAudit.Tests
 {
     /// <summary>
-    /// Implements Tests, that will be used by all tests, that need an <see cref="ApplicationDbContext"/>.
+    /// Will be used by all integration tests, that need an <see cref="ApplicationDbContext"/>.
     /// </summary>
     internal class TransactionalTestBase
     {
@@ -40,7 +40,7 @@ namespace EfCoreAudit.Tests
         private IConfiguration ReadConfiguration()
         {
             return new ConfigurationBuilder()
-                .AddJsonFile("settings.json")
+                .AddJsonFile("appsettings.json")
                 .Build();
         }
 
@@ -133,9 +133,7 @@ namespace EfCoreAudit.Tests
         private ApplicationDbContext GetApplicationDbContext(string connectionString)
         {
             var dbContextOptionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .EnableSensitiveDataLogging()
                 .AddInterceptors(new AuditingInterceptor())
-                .LogTo(Console.WriteLine)
                 .UseSqlServer(connectionString);
 
             return new ApplicationDbContext(dbContextOptionsBuilder.Options);

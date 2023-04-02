@@ -20,7 +20,7 @@ namespace EfCoreAudit.Database.Interceptors
                 return base.SavingChangesAsync(eventData, result, cancellationToken);
             }
 
-            var auditableEntities = ctx.ChangeTracker.Entries<IAuditableEntity>().ToList();
+            var auditableEntities = ctx.ChangeTracker.Entries<AuditableEntity>().ToList();
 
             foreach (var auditableEntity in auditableEntities)
             {

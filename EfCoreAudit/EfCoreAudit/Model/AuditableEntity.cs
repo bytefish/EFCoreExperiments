@@ -3,18 +3,18 @@
 namespace EfCoreAudit.Model
 {
     /// <summary>
-    /// A Person in the application.
+    /// Audit Information.
     /// </summary>
-    public class Person : AuditableEntity
+    public abstract class AuditableEntity
     {
         /// <summary>
-        /// Gets or sets the Id.
+        /// Gets or sets the created date.
         /// </summary>
-        public int Id { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
 
         /// <summary>
-        /// Gets or sets the Name.
+        /// Gets or sets the modified date.
         /// </summary>
-        public required string FullName { get; set; }
+        public DateTime? ModifiedDateTime { get; set; }
     }
 }
