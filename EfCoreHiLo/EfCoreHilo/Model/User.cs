@@ -10,26 +10,26 @@ namespace EfCoreAudit.Temporal.Model
         /// <summary>
         /// Gets or sets the Full Name.
         /// </summary>
-        public string FullName { get; set; } = null!;
+        public required string FullName { get; set; }
 
         /// <summary>
         /// Gets or sets the Preferred Name.
         /// </summary>
-        public string PreferredName { get; set; } = null!;
+        public required string PreferredName { get; set; }
 
         /// <summary>
         /// Gets or sets the Is Permitted To Logon.
         /// </summary>
-        public bool IsPermittedToLogon { get; set; }
+        public required bool IsPermittedToLogon { get; set; }
 
         /// <summary>
         /// Gets or sets the Logon Name.
         /// </summary>
-        public string? LogonName { get; set; } = null!;
+        public string? LogonName { get; set; };
 
         /// <summary>
         /// Gets or sets the Hashed Password.
         /// </summary>
-        public string? HashedPassword { get; set; } = null!;
+        public string? HashedPassword { get; set; }
     }
 }

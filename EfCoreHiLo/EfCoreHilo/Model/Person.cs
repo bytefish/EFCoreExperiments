@@ -15,7 +15,7 @@ namespace EfCoreAudit.Temporal.Model
         /// <summary>
         /// Gets or sets the Preferred Name.
         /// </summary>
-        public string? PreferredName { get; set; }
+        public required string PreferredName { get; set; }
 
         /// <summary>
         /// Gets or sets the Email Address.

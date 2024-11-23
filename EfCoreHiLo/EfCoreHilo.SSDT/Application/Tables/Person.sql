@@ -2,7 +2,7 @@
     [PersonID]              INT                                         CONSTRAINT [DF_Application_Person_PersonID] DEFAULT (NEXT VALUE FOR [Application].[sq_Person]) NOT NULL,
     [FullName]              NVARCHAR(255)                               NOT NULL,
     [PreferredName]         NVARCHAR(255)                               NULL,
-    [Email]                 NVARCHAR(2000)                              NULL,
+    [Email]                 NVARCHAR(255)                               NULL,
     [RowVersion]            ROWVERSION                                  NULL,
     [LastEditedBy]          INT                                         NOT NULL,
     [ValidFrom]             DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,

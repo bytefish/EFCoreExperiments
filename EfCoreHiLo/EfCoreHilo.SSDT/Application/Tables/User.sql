@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [Application].[User](
     [UserID]                INT                                         CONSTRAINT [DF_Application_User_UserID] DEFAULT (NEXT VALUE FOR [Application].[sq_User]) NOT NULL,
     [FullName]              NVARCHAR(50)                                NOT NULL,
-    [PreferredName]         NVARCHAR(50)                                NULL,
+    [PreferredName]         NVARCHAR(50)                                NOT NULL,
     [IsPermittedToLogon]    BIT                                         NOT NULL,
     [LogonName]             NVARCHAR (256)                              NULL,
     [HashedPassword]        NVARCHAR (MAX)                              NULL,

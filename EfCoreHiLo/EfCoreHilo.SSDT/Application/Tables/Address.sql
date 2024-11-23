@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [Application].[Address](
     [AddressID]             INT                                         CONSTRAINT [DF_Application_Address_AddressID] DEFAULT (NEXT VALUE FOR [Application].[sq_Address]) NOT NULL,
-    [AddressLine1]          NVARCHAR(2000)                              NOT NULL,
-    [AddressLine2]          NVARCHAR(2000)                              NULL,
+    [AddressLine1]          NVARCHAR(255)                               NOT NULL,
+    [AddressLine2]          NVARCHAR(255)                               NULL,
     [PostalCode]            NVARCHAR(255)                               NULL,
-    [City]                  NVARCHAR(2000)                              NOT NULL,
+    [City]                  NVARCHAR(255)                               NOT NULL,
     [RowVersion]            ROWVERSION                                  NULL,
     [LastEditedBy]          INT                                         NOT NULL,
     [ValidFrom]             DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,
