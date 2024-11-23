@@ -1,11 +1,11 @@
 ﻿// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using EfCoreAudit.Temporal.Model;
+using EfCoreHilo.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace EfCoreAudit.Temporal.Database
+namespace EfCoreHilo.Database
 {
-    internal class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -44,7 +44,7 @@ namespace EfCoreAudit.Temporal.Database
                     .HasColumnName("PreferredName")
                     .IsRequired(true)
                     .HasMaxLength(50);
-                
+
                 entity.Property(e => e.PreferredName)
                     .HasColumnType("NVARCHAR(255)")
                     .HasColumnName("PreferredName")
@@ -188,13 +188,13 @@ namespace EfCoreAudit.Temporal.Database
                     .HasColumnName("AddressLine2")
                     .IsRequired(true)
                     .HasMaxLength(255);
-                
+
                 entity.Property(e => e.PostalCode)
                     .HasColumnType("NVARCHAR(255)")
                     .HasColumnName("PostalCode")
                     .IsRequired(false)
                     .HasMaxLength(255);
-                
+
                 entity.Property(e => e.City)
                     .HasColumnType("NVARCHAR(255)")
                     .HasColumnName("PostalCode")
@@ -225,7 +225,7 @@ namespace EfCoreAudit.Temporal.Database
                     .HasColumnName("LastEditedBy")
                     .IsRequired(true);
             });
-            
+
             // AddressType
             modelBuilder.HasSequence<int>("sq_AddressType", schema: "Application")
                 .StartsAt(38187)
@@ -297,13 +297,13 @@ namespace EfCoreAudit.Temporal.Database
                     .HasColumnName("PersonID")
                     .IsRequired(true)
                     .HasMaxLength(255);
-                
+
                 entity.Property(e => e.AddressId)
                     .HasColumnType("INT")
                     .HasColumnName("AddressID")
                     .IsRequired(true)
                     .HasMaxLength(255);
-                
+
                 entity.Property(e => e.AddressType)
                     .HasColumnType("INT")
                     .HasColumnName("AddressTypeID")

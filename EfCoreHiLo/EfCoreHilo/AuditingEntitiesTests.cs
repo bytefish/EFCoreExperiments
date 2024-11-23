@@ -1,11 +1,11 @@
 ﻿// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using EfCoreAudit.Temporal.Model;
-using EfCoreAudit.Temporal.Tests;
+using EfCoreHilo.Tests;
 using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
 
-namespace EfCoreAudit.Temporal
+namespace EfCoreHilo
 {
     [TestFixture]
     internal class AuditingEntitiesTests : TestBase
@@ -62,7 +62,7 @@ namespace EfCoreAudit.Temporal
 
             // Prepare
             using var context = CreateDbContext();
-            
+
             var person = new Person
             {
                 FullName = "Philipp Wagner"

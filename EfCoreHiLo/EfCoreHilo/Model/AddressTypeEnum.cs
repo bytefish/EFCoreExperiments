@@ -1,6 +1,6 @@
 ﻿// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-namespace EfCoreAudit.Temporal.Model
+namespace EfCoreHilo.Model
 {
     /// <summary>
     /// An AddressType as Enumeration.

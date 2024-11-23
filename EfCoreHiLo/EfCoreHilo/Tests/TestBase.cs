@@ -1,10 +1,10 @@
 ﻿// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using EfCoreAudit.Temporal.Database;
+using EfCoreHilo.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace EfCoreAudit.Temporal.Tests
+namespace EfCoreHilo.Tests
 {
     /// <summary>
     /// Will be used by all integration tests, that need an <see cref="ApplicationDbContext"/>.
