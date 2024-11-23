@@ -5,26 +5,21 @@ namespace EfCoreAudit.Temporal.Model
     /// <summary>
     /// A Person in the application.
     /// </summary>
-    public class Person
+    public partial class Person : Entity
     {
-        /// <summary>
-        /// Gets or sets the Id.
-        /// </summary>
-        public int Id { get; set; }
-
         /// <summary>
         /// Gets or sets the Name.
         /// </summary>
         public required string FullName { get; set; }
 
         /// <summary>
-        /// Gets or sets the ValidFrom.
+        /// Gets or sets the Preferred Name.
         /// </summary>
-        public DateTime? ValidFrom { get; set; }
+        public string? PreferredName { get; set; }
 
         /// <summary>
-        /// Gets or sets the ValidTo
+        /// Gets or sets the Email Address.
         /// </summary>
-        public DateTime? ValidTo { get; set; }
+        public string? Email { get; set; }
     }
 }

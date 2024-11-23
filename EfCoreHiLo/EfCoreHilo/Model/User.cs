@@ -3,28 +3,33 @@
 namespace EfCoreAudit.Temporal.Model
 {
     /// <summary>
-    /// A Person in the application.
+    /// A User in the application.
     /// </summary>
-    public class Person
+    public partial class User : Entity
     {
         /// <summary>
-        /// Gets or sets the Id.
+        /// Gets or sets the Full Name.
         /// </summary>
-        public int Id { get; set; }
+        public string FullName { get; set; } = null!;
 
         /// <summary>
-        /// Gets or sets the Name.
+        /// Gets or sets the Preferred Name.
         /// </summary>
-        public required string FullName { get; set; }
+        public string PreferredName { get; set; } = null!;
 
         /// <summary>
-        /// Gets or sets the ValidFrom.
+        /// Gets or sets the Is Permitted To Logon.
         /// </summary>
-        public DateTime? ValidFrom { get; set; }
+        public bool IsPermittedToLogon { get; set; }
 
         /// <summary>
-        /// Gets or sets the ValidTo
+        /// Gets or sets the Logon Name.
         /// </summary>
-        public DateTime? ValidTo { get; set; }
+        public string? LogonName { get; set; } = null!;
+
+        /// <summary>
+        /// Gets or sets the Hashed Password.
+        /// </summary>
+        public string? HashedPassword { get; set; } = null!;
     }
 }

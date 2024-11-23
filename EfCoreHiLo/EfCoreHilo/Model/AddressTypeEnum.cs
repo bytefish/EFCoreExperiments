@@ -3,28 +3,33 @@
 namespace EfCoreAudit.Temporal.Model
 {
     /// <summary>
-    /// A Person in the application.
+    /// An AddressType as Enumeration.
     /// </summary>
-    public class Person
+    public enum AddressTypeEnum
     {
         /// <summary>
-        /// Gets or sets the Id.
+        /// None
         /// </summary>
-        public int Id { get; set; }
+        None = 0,
 
         /// <summary>
-        /// Gets or sets the Name.
+        /// Home Address
         /// </summary>
-        public required string FullName { get; set; }
+        Home = 1,
 
         /// <summary>
-        /// Gets or sets the ValidFrom.
+        /// Business Address
         /// </summary>
-        public DateTime? ValidFrom { get; set; }
+        Business = 2,
 
         /// <summary>
-        /// Gets or sets the ValidTo
+        /// Billing Address
         /// </summary>
-        public DateTime? ValidTo { get; set; }
+        Billing = 3,
+
+        /// <summary>
+        /// Shipping Address
+        /// </summary>
+        Shipping = 4,
     }
 }

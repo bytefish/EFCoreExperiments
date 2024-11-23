@@ -3,28 +3,28 @@
 namespace EfCoreAudit.Temporal.Model
 {
     /// <summary>
-    /// A Person in the application.
+    /// An Address in the application.
     /// </summary>
-    public class Person
+    public partial class Address : Entity
     {
         /// <summary>
-        /// Gets or sets the Id.
+        /// Gets or sets the AddressLine 1
         /// </summary>
-        public int Id { get; set; }
+        public required string AddressLine1 { get; set; }
 
         /// <summary>
-        /// Gets or sets the Name.
+        /// Gets or sets the Address Line 2 (optional)
         /// </summary>
-        public required string FullName { get; set; }
+        public string? AddressLine2 { get; set; }
 
         /// <summary>
-        /// Gets or sets the ValidFrom.
+        /// Gets or sets the Postal Code (optional)
         /// </summary>
-        public DateTime? ValidFrom { get; set; }
+        public string? PostalCode { get; set; }
 
         /// <summary>
-        /// Gets or sets the ValidTo
+        /// Gets or sets the City
         /// </summary>
-        public DateTime? ValidTo { get; set; }
+        public required string City { get; set; }
     }
 }
