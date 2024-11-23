@@ -68,5 +68,13 @@
     <Build Include="Application\Stored Procedures\usp_TemporalTables_DeactivateTemporalTables.sql" />
     <Build Include="Application\Stored Procedures\usp_TemporalTables_ReactivateTemporalTables.sql" />
     <Build Include="Application\Stored Procedures\usp_Database_ResetForTests.sql" />
+    <Build Include="Application\Tables\User.sql" />
+    <Build Include="Application\Tables\PersonAddress.sql" />
+    <Build Include="Application\Tables\AddressType.sql" />
+    <Build Include="Application\Tables\Address.sql" />
+    <Build Include="Application\Sequences\sq_User.sql" />
+    <Build Include="Application\Sequences\sq_PersonAddress.sql" />
+    <Build Include="Application\Sequences\sq_AddressType.sql" />
+    <Build Include="Application\Sequences\sq_Address.sql" />
   </ItemGroup>
 </Project>

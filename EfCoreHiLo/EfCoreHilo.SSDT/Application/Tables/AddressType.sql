@@ -5,7 +5,7 @@
     [LastEditedBy]          INT                                         NOT NULL,
     [ValidFrom]             DATETIME2 (7) GENERATED ALWAYS AS ROW START NOT NULL,
     [ValidTo]               DATETIME2 (7) GENERATED ALWAYS AS ROW END   NOT NULL,
-    CONSTRAINT [PK_Person] PRIMARY KEY ([PersonID]),
+    CONSTRAINT [PK_AddressType] PRIMARY KEY ([AddressTypeID]),
     CONSTRAINT [FK_AddressType_LastEditedBy_User_UserID] FOREIGN KEY ([LastEditedBy]) REFERENCES [Application].[User] ([UserID]),
     PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo)
 ) WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = [Application].[AddressTypeHistory]));
